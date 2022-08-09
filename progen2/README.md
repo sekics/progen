@@ -1,7 +1,11 @@
-# ProGen2
-Official release of the **ProGen2** models (`151M`, `764M`, `2.7B`, `6.4B`) for **Protein Engineering** (see <a href="https://arxiv.org/abs/2206.13517">paper</a>).
+# ProGen
+Follow work of **Protein Engineering** (see <a href="https://arxiv.org/abs/2206.13517">paper</a>)
+The work of Progen2 focuses on training a general protein language model. 
+In our work, we need a more domain-specific language model to generate possible AMP sequence. So we follow their work and modify their model.
 
 ## Models
+
+The original work of progen2 trained several powerful models as follow.
 
 | Model | Size | Checkpoint |
 | ------ | ------ | ---------- |
@@ -12,6 +16,8 @@ Official release of the **ProGen2** models (`151M`, `764M`, `2.7B`, `6.4B`) for 
 | progen2-large    | `2.7B` |  https://storage.googleapis.com/sfr-progen-research/checkpoints/progen2-large.tar.gz |
 | progen2-BFD90    | `2.7B` | https://storage.googleapis.com/sfr-progen-research/checkpoints/progen2-BFD90.tar.gz |
 | progen2-xlarge   | `6.4B` | https://storage.googleapis.com/sfr-progen-research/checkpoints/progen2-xlarge.tar.gz |
+
+**To run their code, you can do as follow**
 
 ## Setup
 ```sh
@@ -35,6 +41,12 @@ python3 sample.py --model ${model} --t 0.8 --p 0.9 --max-length 1024 --num-sampl
 
 # log-likelihood (GenBank: TMF32756.1)
 python3 likelihood.py --model ${model} --context "1MGHGVSRPPVVTLRPAVLDDCPVLWRWRNDPETRQASVDEREIPVDTHTRWFEETLKRFDRKLFIVSADGVDAGMVRLDIQDRDAAVSVNIAPEWRGRGVGPRALGCLSREAFGPLALLRMSAVVKRENAASRIAFERAGFTVVDTGGPLLHSSKARLHVVAAIQARMGSTRLPGKVLVSIAGRPTIQRIAERLAVCQELDAVAVSTSVENRDDAIADLAAHLGLVCVRGSETDLIERLGRTAARTGADALVRITADCPLVDPALVDRVVGVWRRSAGRLEYVSNVFPPTFPDGLDVEVLSRTVLERLDREVSDPFFRESLTAYVREHPAAFEIANVEHPEDLSRLRWTMDYPEDLAFVEAVYRRLGNQGEIFGMDDLLRLLEWSPELRDLNRCREDVTVERGIRGTGYHAALRARGQAP2"
+```
+
+## Train
+```python
+## to be more complete
+python run.py
 ```
 
 ## Citation
